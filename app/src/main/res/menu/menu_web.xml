@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.simonzeiger.rss.WebActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/commentsoption"
+        android:title="@string/commentsoption"
+        android:orderInCategory="1" />
+    <item
+        android:id="@+id/browseroption"
+        android:title="@string/open_browser_option"
+        android:orderInCategory="2" />
+
+</menu>

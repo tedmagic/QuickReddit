@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Quick Reddit</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">loading…</string>
+    <string name="comments">comments</string>
+    <string name="title_activity_web">WebActivity</string>
+    <string name="thumbnail">thumbnail</string>
+    <string name="commentsoption">Comments</string>
+    <string name="loadingtext">Loading...</string>
+    <string name="open_browser_option">Open in Browser</string>
+
+</resources>

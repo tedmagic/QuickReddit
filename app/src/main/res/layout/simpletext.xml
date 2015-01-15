@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_weight="1"
+            android:layout_height="65dp"
+            android:contentDescription="@string/thumbnail"
+            android:src="@drawable/url"
+            android:id="@+id/thumbnail"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/score"
+            android:layout_height="wrap_content"
+            android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+            android:paddingTop="5dp"
+            android:textSize="14sp"
+            android:layout_below="@id/thumbnail"
+            android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:gravity="center_vertical"
+            android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+            android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+            android:paddingTop="5dp"
+            android:minHeight="?android:attr/listPreferredItemHeightSmall"
+            android:textColor="@android:color/primary_text_light"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ic_comment_grey600_36dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text1"
+            android:id="@+id/user_and_sub"
+            android:paddingTop="10dp"
+            android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+            android:layout_alignParentLeft="true" />
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/domain"
+            android:layout_height="wrap_content"
+            android:paddingRight="?android:attr/listPreferredItemPaddingLeft"
+            android:layout_below="@id/text1"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/commentsnumtext"
+            android:paddingRight="?android:attr/listPreferredItemPaddingLeft"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+</LinearLayout>
+
+
+
+
+
