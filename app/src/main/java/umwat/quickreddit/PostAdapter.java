@@ -52,7 +52,7 @@ public class PostAdapter extends ArrayAdapter<Submission> {
             holder.userAndSub = (TextView) convertView.findViewById(R.id.user_and_sub);
             holder.domain = (TextView) convertView.findViewById(R.id.domain);
 
-            if (!data.get(position).isSelf() && data.get(position).getThumbnailUrl().trim().length() != 0) {
+            if (!data.get(position).isSelf() && data.get(position).getThumbnailUrl().trim().length() != 0 && !data.get(position).isOver18()) {
 
                 Resources r = context.getResources();
                 int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 65, r.getDisplayMetrics());
@@ -67,7 +67,7 @@ public class PostAdapter extends ArrayAdapter<Submission> {
                 holder.imageView.setLayoutParams(layoutParams);
 
                 Resources r = context.getResources();
-                int px = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 65, r.getDisplayMetrics());
+                int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 65, r.getDisplayMetrics());
                /* layoutParams = new RelativeLayout.LayoutParams(px,px);
                 px = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25, r.getDisplayMetrics());
                 holder.scoreText.setPadding(holder.scoreText.getPaddingLeft(),px,
@@ -82,7 +82,7 @@ public class PostAdapter extends ArrayAdapter<Submission> {
 
         } else {
             holder = (Holder) convertView.getTag();
-            if (!data.get(position).isSelf() && data.get(position).getThumbnailUrl().trim().length() != 0) {
+            if (!data.get(position).isSelf() && data.get(position).getThumbnailUrl().trim().length() != 0 && !data.get(position).isOver18()) {
 
                 Resources r = context.getResources();
                 int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 65, r.getDisplayMetrics());
@@ -94,7 +94,7 @@ public class PostAdapter extends ArrayAdapter<Submission> {
 
             } else {
 
-                RelativeLayout.LayoutParams layoutParams = new  RelativeLayout.LayoutParams(0, 0);
+                RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(0, 0);
                 holder.imageView.setLayoutParams(layoutParams);
 
 
@@ -121,7 +121,7 @@ public class PostAdapter extends ArrayAdapter<Submission> {
             holder.textView.setTextColor(context.getResources().getColor(R.color.abc_primary_text_material_light));
 
         holder.commentNumText.setText(data.get(position).getNumComments() + "\n");
-        holder.userAndSub.setText(data.get(position).getAuthor() + " in " + data.get(position).getSubreddit() +"\n(" +data.get(position).getDomain()+")\n");
+        holder.userAndSub.setText(data.get(position).getAuthor() + " in " + data.get(position).getSubreddit() + "\n(" + data.get(position).getDomain() + ")\n");
 
 
         return convertView;

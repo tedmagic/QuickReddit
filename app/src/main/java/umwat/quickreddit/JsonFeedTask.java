@@ -94,6 +94,7 @@ public class JsonFeedTask extends AsyncTask<Void, Void, JSONObject> {
                 submission.setAuthor(data.getString("author"));
                 submission.setNumComments(data.getInt("num_comments"));
                 submission.setStickied(data.getBoolean("stickied"));
+                submission.setOver18(data.getBoolean("over_18"));
 
                 MainFragment.submisions.add(submission);
 
