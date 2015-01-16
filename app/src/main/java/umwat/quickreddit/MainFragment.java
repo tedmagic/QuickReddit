@@ -20,7 +20,6 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -35,12 +34,18 @@ public class MainFragment extends Fragment {
 
     boolean longPress;
     static SwipeRefreshLayout swipeView;
+    static boolean isFront;
+
 
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        android.support.v7.app.ActionBar actionBar = ((ActionBarActivity)getActivity()).getSupportActionBar();
+        if(actionBar.getTitle().equals("Front Page"))
+            isFront = true;
+        else isFront = false;
 
         if (getActivity().getIntent().getStringExtra("YUS") != null)
             jsonUrl = getActivity().getIntent().getStringExtra("YUS");
@@ -61,16 +66,12 @@ public class MainFragment extends Fragment {
 
         final FragmentTransaction fragmentTransaction2 = fragmentManager.beginTransaction();
 
-        MainActivity.textView = (TextView) rootView.findViewById(R.id.empty_textview);
-
         MainActivity.mListView = (ListView) rootView.findViewById(R.id.thelistview);
 
-        MainActivity.textView.setVisibility(View.VISIBLE);
-        MainActivity.mListView.setVisibility(View.GONE);
 
-
-        if(savedInstanceState == null) {
+        if(savedInstanceState == null && submisions.size() == 0) {
             final JsonFeedTask at = new JsonFeedTask(jsonUrl);
+            swipeView.setRefreshing(true);
 
             at.execute();
         }
@@ -89,8 +90,7 @@ public class MainFragment extends Fragment {
                 return false;
             }
         });
-        android.support.v7.app.ActionBar actionBar = ((ActionBarActivity)getActivity()).getSupportActionBar();
-        if(actionBar.getTitle().equals("Front Page")) {
+        if(isFront) {
             MainActivity.mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                 @Override
                 public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {

@@ -23,9 +23,9 @@
             android:layout_width="wrap_content"
             android:id="@+id/score"
             android:layout_height="wrap_content"
-            android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+            android:paddingLeft="18dp"
             android:paddingTop="5dp"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:layout_below="@id/thumbnail"
             android:layout_alignParentLeft="true" />
     </RelativeLayout>
@@ -56,19 +56,10 @@
             android:layout_below="@id/text1"
             android:id="@+id/user_and_sub"
             android:paddingTop="10dp"
+            android:lineSpacingMultiplier="1.1"
             android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
             android:layout_alignParentLeft="true" />
 
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:id="@+id/domain"
-            android:layout_height="wrap_content"
-            android:paddingRight="?android:attr/listPreferredItemPaddingLeft"
-            android:layout_below="@id/text1"
-            android:layout_alignParentRight="true" />
 
         <TextView
             android:layout_width="wrap_content"

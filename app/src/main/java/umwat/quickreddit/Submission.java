@@ -22,6 +22,16 @@ public class Submission {
     private boolean hidden;
     private String commentsUrl;
     private String domain;
+    private long created;
+
+    public long getCreated() {
+        return created;
+    }
+
+    public void setCreated(long created) {
+        this.created = created;
+    }
+
 
     public void setScore(int score) {
         this.score = score;

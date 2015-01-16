@@ -1,7 +1,6 @@
 package umwat.quickreddit;
 
 import android.os.AsyncTask;
-import android.view.View;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -95,6 +94,7 @@ public class JsonFeedTask extends AsyncTask<Void, Void, JSONObject> {
                 submission.setNumComments(data.getInt("num_comments"));
                 submission.setStickied(data.getBoolean("stickied"));
                 submission.setOver18(data.getBoolean("over_18"));
+                submission.setCreated(data.getLong("created_utc"));
 
                 MainFragment.submisions.add(submission);
 
@@ -103,12 +103,11 @@ public class JsonFeedTask extends AsyncTask<Void, Void, JSONObject> {
 
 
 
-            // MainActivity.textView.setText((String)jsonObject.get(0));
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        MainActivity.textView.setVisibility(View.GONE);
-        MainActivity.mListView.setVisibility(View.VISIBLE);
+
+
 
         MainFragment.swipeView.setRefreshing(false);
         MainActivity.adapter.notifyDataSetChanged();
