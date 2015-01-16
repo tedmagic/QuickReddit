@@ -14,7 +14,7 @@ import android.widget.TextView;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 /**
- * Created by Simon on 12/31/14.
+ * Created on 12/31/14.
  */
 public class DetailsFragment extends Fragment {
 

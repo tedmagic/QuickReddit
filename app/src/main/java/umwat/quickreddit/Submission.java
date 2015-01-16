@@ -1,7 +1,7 @@
 package umwat.quickreddit;
 
 /**
- * Created by Simon on 1/13/15.
+ * Created on 1/13/15.
  */
 public class Submission {
     private int score;

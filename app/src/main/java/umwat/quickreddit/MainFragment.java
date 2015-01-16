@@ -24,7 +24,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 /**
- * Created by Simon on 12/31/14.
+ * Created on 12/31/14.
  */
 public class MainFragment extends Fragment {
 

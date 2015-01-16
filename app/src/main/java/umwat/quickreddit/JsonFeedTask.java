@@ -13,7 +13,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * Created by Simon on 12/31/14.
+ * Created on 12/31/14.
  */
 public class JsonFeedTask extends AsyncTask<Void, Void, JSONObject> {
     String jsonFeedUrl;

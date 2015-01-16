@@ -17,7 +17,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 /**
- * Created by Simon on 1/6/15.
+ * Created on 1/6/15.
  */
 public class PostAdapter extends ArrayAdapter<Submission> {
     Context context;
